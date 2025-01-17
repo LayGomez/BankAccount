@@ -1,6 +1,6 @@
 package org.example;
 
-abstract class BankAccount {
+public class BankAccount {
 
     protected float balance;
 
