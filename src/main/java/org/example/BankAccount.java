@@ -20,6 +20,26 @@ public class BankAccount {
         this.monthlyCommission = 0;
     }
 
+    public float getBalance() {
+        return balance;
+    }
+
+    public int getNumConsignment() {
+        return numConsignment;
+    }
+
+    public int getNumWithdraw() {
+        return numWithdraw;
+    }
+
+    public float getAnnualRate() {
+        return annualRate;
+    }
+
+    public float getMonthlyCommission() {
+        return monthlyCommission;
+    }
+
     public void consignMoney(float amount){
         if (amount > 0) {
             balance += amount;

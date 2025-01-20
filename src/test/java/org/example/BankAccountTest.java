@@ -4,13 +4,12 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.is;
 
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-class BankAccountApplicationTest {
+class BankAccountTest {
     @Test
     void testConsignmentMoney(){
         BankAccount bankAccount = new BankAccount(10000, 4);
@@ -49,4 +48,6 @@ class BankAccountApplicationTest {
 
         assertThat(bankAccount.balance, is(equalTo(expected)));
     }
+
+
 }

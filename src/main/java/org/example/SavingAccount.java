@@ -1,9 +1,9 @@
 package org.example;
 
-public class SavingsAccount extends BankAccount{
+public class SavingAccount extends BankAccount{
     private boolean isActive;
 
-    public SavingsAccount(float balance, float annualRate) {
+    public SavingAccount(float balance, float annualRate) {
         super(balance, annualRate);
         this.isActive = balance >= 10000;
     }
@@ -16,6 +16,10 @@ public class SavingsAccount extends BankAccount{
             System.out.println("The account is inactive. Consignments cannot be made.");
         }
         checkStatus();
+    }
+
+    public boolean isActive() {
+        return isActive;
     }
 
     @Override
@@ -33,6 +37,7 @@ public class SavingsAccount extends BankAccount{
         if (numWithdraw > 4){
             monthlyCommission += (numWithdraw - 4) * 1000;
         }
+        balance -= monthlyCommission;
         super.calculateMonthlyInterest();
         checkStatus();
     }

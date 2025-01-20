@@ -8,6 +8,10 @@ public class CheckingAccount extends BankAccount{
         this.bankOverdraft = 0;
     }
 
+    public float getBankOverdraft() {
+        return bankOverdraft;
+    }
+
     @Override
     public void withdrawMoney(float amount){
         if (amount > 0) {
